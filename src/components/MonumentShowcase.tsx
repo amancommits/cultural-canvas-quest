@@ -72,7 +72,7 @@ export function MonumentShowcase() {
                       className="backdrop-blur-sm"
                       onClick={() => {
                         if (monument.id === 'konark') {
-                          window.open('https://www.3ds.com/progress-is-human/heritage-and-future/konark-sun-temple', '_blank');
+                          window.location.href = 'https://www.3ds.com/progress-is-human/heritage-and-future/konark-sun-temple';
                         }
                       }}
                     >
