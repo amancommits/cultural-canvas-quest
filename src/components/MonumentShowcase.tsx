@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import konarkHero from "@/assets/konark-hero.jpg";
+import jagannathTemple from "@/assets/jagannath-temple.jpg";
+import lingarajTemple from "@/assets/lingaraj-temple.jpg";
 
 const monuments = [
   {
@@ -22,6 +24,7 @@ const monuments = [
     type: "Sacred Temple",
     views: "8.7K",
     likes: "2.1K",
+    image: jagannathTemple,
     featured: false
   },
   {
@@ -31,6 +34,7 @@ const monuments = [
     type: "Ancient Temple",
     views: "6.3K",
     likes: "1.8K",
+    image: lingarajTemple,
     featured: false
   }
 ];
@@ -62,7 +66,16 @@ export function MonumentShowcase() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center gap-2">
-                    <Button size="sm" variant="heritage" className="backdrop-blur-sm">
+                    <Button 
+                      size="sm" 
+                      variant="heritage" 
+                      className="backdrop-blur-sm"
+                      onClick={() => {
+                        if (monument.id === 'konark') {
+                          window.open('https://www.3ds.com/progress-is-human/heritage-and-future/konark-sun-temple', '_blank');
+                        }
+                      }}
+                    >
                       <Play className="h-4 w-4 mr-1" />
                       3D Tour
                     </Button>
