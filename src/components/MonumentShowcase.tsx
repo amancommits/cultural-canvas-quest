@@ -71,8 +71,12 @@ export function MonumentShowcase() {
                       variant="heritage" 
                       className="backdrop-blur-sm"
                       onClick={() => {
+                        console.log('3D Tour button clicked for monument:', monument.id);
                         if (monument.id === 'konark') {
+                          console.log('Navigating to Konark 3D tour...');
                           window.location.href = 'https://www.3ds.com/progress-is-human/heritage-and-future/konark-sun-temple';
+                        } else {
+                          console.log('3D tour not available for this monument yet');
                         }
                       }}
                     >
